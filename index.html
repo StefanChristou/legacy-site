@@ -9,27 +9,19 @@
 	<link rel="stylesheet" type="text/css" media="screen,print" href="sccom.css" />
 </head>
 
-<!-- 
+<!--
 
-Hi there! 
+Hi there!
 
-Thanks for taking the time to look at my code. I apreciate it!
+Thanks for taking the time to look at my code.
 
 It is my intention with this site to create a somewhat over-engineered portfolio. I want to show the use of best practices in front-end developement and how they can be applied, even to a site as small as this.
 
 In this code you will find a strict adhearence to the HTML5 specification. Semtantic use of HTML is the key here, with the DOM used in preference to canvas to make the site as accessable to as many people as possible. The site does not use tables!
 
-In terms of CSS, an OOCSS aproach is taken. ID's are avoided when it comes to style, but welcomed for use with jQuery. Media queries are used to provide responsive design. The site is reponsively designed to three breakpoints that represent mid-points for common mobile, tablet and desktop browsers. JavaScript is used to provide a slightly different user-experience on touch-devices compared to those that use a mouse.
+ID's are avoided when it comes to style, but welcomed for use with jQuery. Media queries are used to provide responsive design. The site is reponsively designed to three breakpoints that represent mid-points for common mobile, tablet and desktop browsers. JavaScript is used to provide a slightly different user-experience on touch-devices compared to those that use a mouse.
 
-jQuery is the main point of interface with the DOM, with 'vanilla' JavaScript used too. The subset of JavaScript described by Douglass Crockford's JavaScript, the good parts is adhered to. That's why you wont find a document.ready call in my JavaScript.  
-
-Animations are controlled with the JavaScript library GreenSock. This simplifies the developement of animation (compared to CSS-only animations) and provides a wealth of powerful new tools. You might notice my logo is an animated SVG. This is implimented with GreenSock with only one line of code.
-
-If you view this page on a Mac, then look at it on a Windows OS, you may notice the font is different. This is because of differences in the way fonts are rendered on Windows compared with other desktop and tablet/mobile opperating systems.
-
-There's even a bit of showboating with the use of the physics engine Box2D jQuery. This engine is not the fastest JavaScript-based physics library out on the web, nor is it the lightest in terms of data-size. However it is pretty much the only engine that works with DOM elements, rather than canvas. And it is incredibly quick to impliment, with three lines of code to setup basic use. It's just one line to inlude jQuery, one for Box2D jQuery, and one for configuration.
-
-The site is designed to be compatible with IE v9 to current, Chrome vX to Current, Safari vX to current, Mobile Safari, etc etc etc ** finish this list with canIuse.
+jQuery is the main point of interface with the DOM, with 'vanilla' JavaScript used too. The subset of JavaScript described by Douglass Crockford's JavaScript, the good parts is adhered to. That's why you wont find a document.ready call in my JavaScript.
 
 If you have any comments about this site, or would like to get in touch for any reason please send me an email to stefan.christou@gmail.com .
 
@@ -40,20 +32,8 @@ Stefan
 
 -->
 
-<!-- To do...
 
-Clean up
-• Clean up unused data tags
-• Make tags semantic
-• Rid page of inline css
-• Clean up CSS
-
-Add functionality
-
-    
 <body>
-
--->
 
 <div class="bounder">
 
@@ -63,12 +43,12 @@ Add functionality
 		<a href="http://createthink.stefanchristou.com">Blog</a>&nbsp;&nbsp;&nbsp;
 		<a href="about.html">About</a>
 	</div>
-	
+
 	<!-- Title -->
 	<div class="ttl">
 		<h1>Projects</h1>
 	</div>
-	
+
 	<!-- Logo -->
 	<div class="logo">
 		<a href="http://stefanchristou.com/"><img src="imgs/sc-logo.png" alt="SC" /></a>
@@ -76,6 +56,37 @@ Add functionality
 
 	<!-- Project thumbs -->
 	<div class="thumblasso">
+
+		<!-- Missguided -->
+		<div class="project_thumb" onmouseover="this.id='hover';" onmouseout="this.id='nohover';"  id="nohover">
+			<div>
+				<!-- Link -->
+				<a href="missguided.html" onmouseover="this.className='hover';" onmouseout="this.className='nohover';"  class="nohover" id="pstc" rel="history" onfocus="this.blur()">
+
+					<!-- Loader -->
+					<div class="loader_holder" id="load_stc">
+						<img src="_gfx/loadingAnim.gif">
+					</div>
+
+					<!-- image -->
+					<div class="cardimgcrop" id="cardthumb_stc">
+						<img src="imgs/miss-icon.jpg" width="100%" height="auto">
+					</div>
+
+					<!-- titles -->
+					<div class="thumb_info">
+						<div class="thumb_title ">
+							<span class="text">Missguided: HPTO pitch</span>&nbsp;
+						</div>
+						<div class="thumb_sub">
+							<span class="text">Interactive ad for Tablet</span>
+						</div>
+					</div>
+
+				</a>
+			</div>
+		</div>
+
 		<div class="project_thumb" onmouseover="this.id='hover';" onmouseout="this.id='nohover';"  id="nohover">
 			<div>
 				<!-- Link -->
