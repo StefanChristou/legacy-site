@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>About Stefan and this Site</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1">
+	<link rel="stylesheet" type="text/css" media="screen,print" href="MyFontsWebfontsKit.css" />
+	<link rel="stylesheet" type="text/css" media="screen,print" href="sccom.css" />
+	<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+</head>
+
+<body>
+
+<div class="bounder">
+
+	<!-- Header links -->
+	<div class="hdrlinks">
+		<a href="index.html">Projects</a>&nbsp;&nbsp;&nbsp;
+		<a href="http://createthink.stefanchristou.com">Blog</a>&nbsp;&nbsp;&nbsp;
+		<a href="about.html">About</a>
+	</div>
+	
+	<!-- Title -->
+	<div class="ttl">
+		<h1>About</h1>
+	</div>
+	
+	<!-- Logo -->
+	<div class="logo">
+		<a href="http://stefanchristou.com/"><img src="imgs/sc-logo.png" alt="SC" /></a>
+	</div>
+
+	<!-- Content -->
+	<div class="post">
+		<div class="stefan">
+  			<img src="imgs/stefanandmichael1.jpg" alt="" />
+		</div>
+    <p>Stefan Christou is a person with a deep interest in technology and design.</p>
+    <p>He enjoys making in a range of materials and for a range of media. Stefan enjoys the diversity of his work, and has worked with everything from using composites when building light aircraft, to working with cardboard, plastics, and coding for web and digital devices.</p>
+    <p>Stefan believes that products should be deigned to be in harmony with their users&rsquo; cognition, emotions and environment.</p>
+    <p>Stefan&rsquo;s principle art and design heroes are Marcel Duchamp, Richard Hamilton, Dieter Rams, Bill Lear, Buckminster Fuller and Richard Rogers.</p>
+    <p>Stefan started his career in the field of journalism and has worked as a Producer for Associated Press Television News. He has produced and presented radio, has written scripts for documentaries and web video, and has written for print and online.</p>
+    <p>His current focus, however, is on designing for HPTO ads, teaching, coding and on research into interactions with content on mobile devices.</p>
+    <p>Stefan has a Masters Degree where he earned a Distinction for research that remixed the ethos of documentary journalism with the interactive possibilities of mobile devices.</p>
+    <p>You can contact Stefan via email at <a href=mailto:stefan.christou@gmail.com>stefan.christou@gmail.com</a>.</p>
+    <p>Stefan lives in east London.</p>
+	</div>
+</div>
+<script>
+  function preload(arrayOfImages) {
+    $(arrayOfImages).each(function(){
+        $('<img/>')[0].src = this;
+        // Alternatively you could use:
+        // (new Image()).src = this;
+    });
+}
+
+// Usage:
+
+preload([
+    'imgs/stefanandmichael2.jpg',
+    'imgs/stefanandmichael3.jpg',
+    'imgs/stefanandmichael4.jpg',
+    'imgs/stefanandmichael5.jpg',
+    'imgs/stefanandmichael6.jpg',
+    'imgs/stefanandmichael7.jpg',
+    'imgs/stefanandmichael8.jpg',
+    'imgs/stefanandmichael9.jpg',
+    'imgs/stefanandmichael10.jpg',
+]);
+
+
+jQuery(document).ready(function() {
+    var timer, imgsrc, cnt = 0;
+    $('.stefan img').bind('mouseover', function() {
+      // if there is no timer
+      if (!timer) {
+        var $t = $(this);
+        // get the image src
+        imgsrc = $t.attr('src').replace('1.jpg','');
+        // start a new timer
+        timer = setInterval(function() {
+          // periodically change the src
+          $t.attr('src', imgsrc + (cnt+1) + ".jpg");
+          // and adjust the counter
+          cnt = ( cnt + 1 ) % 10; // 0, 1, 2
+        }, 300); // <- 1000ms = 1s
+      }
+    }).bind('mouseout',function() {
+      // stop rotation
+      if (timer) {
+        clearInterval(timer);
+        timer = null;
+      }
+      // set the default img
+      $(this).attr('src', imgsrc + '1.jpg');
+    });
+});
+</script>
+
+</body>
+</html>
