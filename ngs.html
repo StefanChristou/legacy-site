@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>National Garden Scheme site build</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1">
+	<link rel="stylesheet" type="text/css" media="screen,print" href="MyFontsWebfontsKit.css" />
+	<link rel="stylesheet" type="text/css" media="screen,print" href="sccom.css" />
+</head>
+
+<body>
+
+<div class="bounder">
+
+	<!-- Header links -->
+	<div class="hdrlinks">
+		<a href="index.html">Projects</a>&nbsp;&nbsp;&nbsp;
+		<a href="http://createthink.stefanchristou.com">Blog</a>&nbsp;&nbsp;&nbsp;
+		<a href="about.html">About</a>
+	</div>
+
+	<!-- Title -->
+	<div class="ttl">
+		<h1>National Garden Scheme site build</h1>
+	</div>
+
+	<!-- Logo -->
+	<div class="logo">
+		<a href="http://stefanchristou.com/"><img src="imgs/sc-logo.svg" alt="SC" /></a>
+	</div>
+
+	<!-- Content -->
+	<div class="post">
+		<span class="postimgholder"><a href="https://www.ngs.org.uk/"><img src="imgs/ngs-in-situ.jpg" class="postimg" alt="National Garden Scheme" /></a></span>
+		<p>The <a href="https://www.ngs.org.uk/">National Garden Scheme</a> has operated since early 1900s providing funding and support for Nursing and Healthcare charities. As part of their re-brand, carried out by west-London agency <a href="http://www.bigfish.co.uk/">BigFish</a>, they needed a new website.</p>
+
+		<p>I worked closely with BigFish’s designers and developers to build the Front End of the site. The site was built on Wordpress with a theme built from scratch. Woo-Commerce and a custom API for querying a database of gardens were used. The site also has a members area for volunteers and an events section. More than 40 page/post templates were created, along with several custom post types for a variety of content. </p>
+
+		<p>The most challenging aspect of the build was the Front End of the garden search. A JSON API was created by the backend team at BigFish which in turn queries NGS’ own API. However this was only ready a week and a half before the launch date. With the backend team on holiday the week before launch (!). Because of limited back-end resources there wasn’t time to implement React + Redux. Instead the search functionality was built using jQuery. This meant writing > 1000 lines of JavaScript to make Ajax requests, build results in a card layout and on a Google map, and manage state, pagination, a gallery view, advanced search filters, favouriting, and searching from both within the search-page and the front page. This meant lots of hand-coding, lots of moving parts and little time to test.</p>
+
+		<p>Despite these challenges the site was delivered on time within a total of 9 weeks and with a very satisfied client. The search functions very well, with only a few API and UI tweaks needed as the site matures.</p>
+	</div>
+</div>
+
+
+</body>
+</html>
