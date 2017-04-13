@@ -49,57 +49,6 @@
 	</div>
 </div>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-<script>
-  function preload(arrayOfImages) {
-    $(arrayOfImages).each(function(){
-        $('<img/>')[0].src = this;
-        // Alternatively you could use:
-        // (new Image()).src = this;
-    });
-}
-
-// Usage:
-
-preload([
-    'imgs/stefanandmichael2.jpg',
-    'imgs/stefanandmichael3.jpg',
-    'imgs/stefanandmichael4.jpg',
-    'imgs/stefanandmichael5.jpg',
-    'imgs/stefanandmichael6.jpg',
-    'imgs/stefanandmichael7.jpg',
-    'imgs/stefanandmichael8.jpg',
-    'imgs/stefanandmichael9.jpg',
-    'imgs/stefanandmichael10.jpg',
-]);
-
-
-jQuery(document).ready(function() {
-    var timer, imgsrc, cnt = 0;
-    $('.stefan img').bind('mouseover', function() {
-      // if there is no timer
-      if (!timer) {
-        var $t = $(this);
-        // get the image src
-        imgsrc = $t.attr('src').replace('1.jpg','');
-        // start a new timer
-        timer = setInterval(function() {
-          // periodically change the src
-          $t.attr('src', imgsrc + (cnt+1) + ".jpg");
-          // and adjust the counter
-          cnt = ( cnt + 1 ) % 10; // 0, 1, 2
-        }, 300); // <- 1000ms = 1s
-      }
-    }).bind('mouseout',function() {
-      // stop rotation
-      if (timer) {
-        clearInterval(timer);
-        timer = null;
-      }
-      // set the default img
-      $(this).attr('src', imgsrc + '1.jpg');
-    });
-});
-</script>
-
+<script src="js/about.js"></script>
 </body>
 </html>
